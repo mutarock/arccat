@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "UnitTest.h"
+#import "arccat.h"
 
 @implementation AppDelegate
 
@@ -25,13 +25,7 @@
     [self.window makeKeyAndVisible];
 
     
-    [UnitTest run];
-    
-    if (UnitTestManager.sharedInstance.assertions > 0) {
-        self.viewController.view.backgroundColor =
-            (0 == UnitTestManager.sharedInstance.failures) ?
-                [UIColor colorWithRed:0.13 green:0.63 blue:0.13 alpha:1] : [UIColor redColor];
-    }
+    [UnitTest run:self.viewController];
     
     return YES;
 }

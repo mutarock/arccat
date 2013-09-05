@@ -1,3 +1,11 @@
+//
+//  NSStringExt.m
+//  TestApp
+//
+//  Created by ssukcha on 05/09/13.
+//  Copyright (c) 2013 factorcat. All rights reserved.
+//
+
 #import "NSStringExt.h"
 #import "NSArrayExt.h"
 
@@ -90,6 +98,15 @@ NSArray* _w(NSString* str) {
 
 -(NSString*) to_s {
     return self;
+}
+
+-(NSString*) ljust:(int)justified {
+    if (self.length < justified) {
+        NSString* padStr = SPACE;
+        return SWF(@"%@%@", self, [padStr repeat:justified - self.length]);
+    } else {
+        return self;
+    }
 }
 
 @end

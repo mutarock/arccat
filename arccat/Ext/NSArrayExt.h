@@ -17,6 +17,9 @@
 -(BOOL) include:(id)obj ;
 -(NSArray*) slice:(int)loc :(int)length_ ;
 -(NSArray*) slice:(int)loc backward:(int)backward ;
+-(id) first ;
+-(id) second ;
+-(id) third ;
 
 @end
 

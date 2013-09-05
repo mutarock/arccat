@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B69E83717D92DF70077AB87 /* NSArrayExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E82817D92DF70077AB87 /* NSArrayExt.m */; };
+		2B69E83817D92DF70077AB87 /* NSDateExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E82A17D92DF70077AB87 /* NSDateExt.m */; };
+		2B69E83917D92DF70077AB87 /* NSDictionaryExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E82C17D92DF70077AB87 /* NSDictionaryExt.m */; };
+		2B69E83A17D92DF70077AB87 /* NSStringExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E82E17D92DF70077AB87 /* NSStringExt.m */; };
+		2B69E83B17D92DF70077AB87 /* UnitTestUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E83117D92DF70077AB87 /* UnitTestUI.m */; };
+		2B69E83C17D92DF70077AB87 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E83417D92DF70077AB87 /* Logger.m */; };
+		2B69E83D17D92DF70077AB87 /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E83617D92DF70077AB87 /* UnitTest.m */; };
+		2B69E87417D930950077AB87 /* NSObjectExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E87317D930950077AB87 /* NSObjectExt.m */; };
+		2B69E87717D931220077AB87 /* NSClassExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E87617D931220077AB87 /* NSClassExt.m */; };
+		2B69E87A17D9360F0077AB87 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69E87917D9360F0077AB87 /* TestObject.m */; };
 		2B9CF4E517D7A24C00B0AFE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9CF4E417D7A24C00B0AFE3 /* UIKit.framework */; };
 		2B9CF4E717D7A24C00B0AFE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9CF4E617D7A24C00B0AFE3 /* Foundation.framework */; };
 		2B9CF4E917D7A24C00B0AFE3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9CF4E817D7A24C00B0AFE3 /* CoreGraphics.framework */; };
@@ -19,21 +29,35 @@
 		2B9CF4FE17D7A24C00B0AFE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CF4FD17D7A24C00B0AFE3 /* ViewController.m */; };
 		2B9CF50117D7A24D00B0AFE3 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CF4FF17D7A24D00B0AFE3 /* ViewController_iPhone.xib */; };
 		2B9CF50417D7A24D00B0AFE3 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CF50217D7A24D00B0AFE3 /* ViewController_iPad.xib */; };
-		2B9CF50F17D7A36F00B0AFE3 /* NSStringExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CF50D17D7A36F00B0AFE3 /* NSStringExt.m */; };
-		2BA819B617D83C1B002F5999 /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819B517D83C1B002F5999 /* UnitTest.m */; };
 		2BA819BB17D83CCD002F5999 /* TestString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819BA17D83CCD002F5999 /* TestString.m */; };
-		2BA819BE17D844E2002F5999 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819BD17D844E2002F5999 /* Logger.m */; };
 		2BA819C117D85069002F5999 /* TestNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C017D85069002F5999 /* TestNumber.m */; };
 		2BA819C417D855E6002F5999 /* TestDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C317D855E6002F5999 /* TestDictionary.m */; };
-		2BA819C717D85821002F5999 /* NSArrayExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C617D85821002F5999 /* NSArrayExt.m */; };
 		2BA819CA17D86133002F5999 /* TestArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C917D86133002F5999 /* TestArray.m */; };
-		2BA819CD17D86435002F5999 /* NSDictionaryExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819CC17D86435002F5999 /* NSDictionaryExt.m */; };
-		2BA819D017D866B0002F5999 /* NSDateExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819CF17D866B0002F5999 /* NSDateExt.m */; };
 		2BA819D317D866ED002F5999 /* TestDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819D217D866ED002F5999 /* TestDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B51B5D617D8C80A00C4A52D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2B69E82517D92DF70077AB87 /* arccat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arccat.h; sourceTree = "<group>"; };
+		2B69E82717D92DF70077AB87 /* NSArrayExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExt.h; sourceTree = "<group>"; };
+		2B69E82817D92DF70077AB87 /* NSArrayExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExt.m; sourceTree = "<group>"; };
+		2B69E82917D92DF70077AB87 /* NSDateExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateExt.h; sourceTree = "<group>"; };
+		2B69E82A17D92DF70077AB87 /* NSDateExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateExt.m; sourceTree = "<group>"; };
+		2B69E82B17D92DF70077AB87 /* NSDictionaryExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryExt.h; sourceTree = "<group>"; };
+		2B69E82C17D92DF70077AB87 /* NSDictionaryExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryExt.m; sourceTree = "<group>"; };
+		2B69E82D17D92DF70077AB87 /* NSStringExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExt.h; sourceTree = "<group>"; };
+		2B69E82E17D92DF70077AB87 /* NSStringExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExt.m; sourceTree = "<group>"; };
+		2B69E83017D92DF70077AB87 /* UnitTestUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTestUI.h; sourceTree = "<group>"; };
+		2B69E83117D92DF70077AB87 /* UnitTestUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTestUI.m; sourceTree = "<group>"; };
+		2B69E83317D92DF70077AB87 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		2B69E83417D92DF70077AB87 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		2B69E83517D92DF70077AB87 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
+		2B69E83617D92DF70077AB87 /* UnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
+		2B69E87217D930950077AB87 /* NSObjectExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectExt.h; sourceTree = "<group>"; };
+		2B69E87317D930950077AB87 /* NSObjectExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectExt.m; sourceTree = "<group>"; };
+		2B69E87517D931220077AB87 /* NSClassExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSClassExt.h; sourceTree = "<group>"; };
+		2B69E87617D931220077AB87 /* NSClassExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSClassExt.m; sourceTree = "<group>"; };
+		2B69E87917D9360F0077AB87 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 		2B9CF4E117D7A24C00B0AFE3 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9CF4E417D7A24C00B0AFE3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B9CF4E617D7A24C00B0AFE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,24 +75,11 @@
 		2B9CF4FD17D7A24C00B0AFE3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2B9CF50017D7A24D00B0AFE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		2B9CF50317D7A24D00B0AFE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		2B9CF50C17D7A36F00B0AFE3 /* NSStringExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExt.h; sourceTree = "<group>"; };
-		2B9CF50D17D7A36F00B0AFE3 /* NSStringExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExt.m; sourceTree = "<group>"; };
-		2BA819B417D83C1B002F5999 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
-		2BA819B517D83C1B002F5999 /* UnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
 		2BA819BA17D83CCD002F5999 /* TestString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestString.m; sourceTree = "<group>"; };
-		2BA819BC17D844E2002F5999 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
-		2BA819BD17D844E2002F5999 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		2BA819C017D85069002F5999 /* TestNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNumber.m; sourceTree = "<group>"; };
 		2BA819C317D855E6002F5999 /* TestDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDictionary.m; sourceTree = "<group>"; };
-		2BA819C517D85821002F5999 /* NSArrayExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExt.h; sourceTree = "<group>"; };
-		2BA819C617D85821002F5999 /* NSArrayExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExt.m; sourceTree = "<group>"; };
 		2BA819C917D86133002F5999 /* TestArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestArray.m; sourceTree = "<group>"; };
-		2BA819CB17D86435002F5999 /* NSDictionaryExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryExt.h; sourceTree = "<group>"; };
-		2BA819CC17D86435002F5999 /* NSDictionaryExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryExt.m; sourceTree = "<group>"; };
-		2BA819CE17D866B0002F5999 /* NSDateExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateExt.h; sourceTree = "<group>"; };
-		2BA819CF17D866B0002F5999 /* NSDateExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateExt.m; sourceTree = "<group>"; };
 		2BA819D217D866ED002F5999 /* TestDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDate.m; sourceTree = "<group>"; };
-		2BFDBC7E17D8719700AE0A6A /* arccat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arccat.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +96,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B69E82417D92DF70077AB87 /* arccat */ = {
+			isa = PBXGroup;
+			children = (
+				2B69E82517D92DF70077AB87 /* arccat.h */,
+				2B69E82617D92DF70077AB87 /* Ext */,
+				2B69E82F17D92DF70077AB87 /* UI */,
+				2B69E83217D92DF70077AB87 /* UnitTest */,
+			);
+			name = arccat;
+			path = ../arccat;
+			sourceTree = "<group>";
+		};
+		2B69E82617D92DF70077AB87 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				2B69E82717D92DF70077AB87 /* NSArrayExt.h */,
+				2B69E82817D92DF70077AB87 /* NSArrayExt.m */,
+				2B69E82917D92DF70077AB87 /* NSDateExt.h */,
+				2B69E82A17D92DF70077AB87 /* NSDateExt.m */,
+				2B69E82B17D92DF70077AB87 /* NSDictionaryExt.h */,
+				2B69E82C17D92DF70077AB87 /* NSDictionaryExt.m */,
+				2B69E82D17D92DF70077AB87 /* NSStringExt.h */,
+				2B69E82E17D92DF70077AB87 /* NSStringExt.m */,
+				2B69E87217D930950077AB87 /* NSObjectExt.h */,
+				2B69E87317D930950077AB87 /* NSObjectExt.m */,
+				2B69E87517D931220077AB87 /* NSClassExt.h */,
+				2B69E87617D931220077AB87 /* NSClassExt.m */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		2B69E82F17D92DF70077AB87 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2B69E83017D92DF70077AB87 /* UnitTestUI.h */,
+				2B69E83117D92DF70077AB87 /* UnitTestUI.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2B69E83217D92DF70077AB87 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				2B69E83317D92DF70077AB87 /* Logger.h */,
+				2B69E83417D92DF70077AB87 /* Logger.m */,
+				2B69E83517D92DF70077AB87 /* UnitTest.h */,
+				2B69E83617D92DF70077AB87 /* UnitTest.m */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
 		2B9CF4D817D7A24C00B0AFE3 = {
 			isa = PBXGroup;
 			children = (
 				2B51B5D617D8C80A00C4A52D /* README.md */,
+				2B69E82417D92DF70077AB87 /* arccat */,
 				2BA819B717D83CB5002F5999 /* TestCases */,
-				2B9CF50A17D7A36F00B0AFE3 /* arccat */,
 				2B9CF4EA17D7A24C00B0AFE3 /* TestApp */,
 				2B9CF4E317D7A24C00B0AFE3 /* Frameworks */,
 				2B9CF4E217D7A24C00B0AFE3 /* Products */,
@@ -143,43 +205,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2B9CF50A17D7A36F00B0AFE3 /* arccat */ = {
-			isa = PBXGroup;
-			children = (
-				2B9CF50B17D7A36F00B0AFE3 /* Ext */,
-				2B9CF50E17D7A36F00B0AFE3 /* UnitTest */,
-			);
-			name = arccat;
-			path = ../arccat;
-			sourceTree = "<group>";
-		};
-		2B9CF50B17D7A36F00B0AFE3 /* Ext */ = {
-			isa = PBXGroup;
-			children = (
-				2B9CF50C17D7A36F00B0AFE3 /* NSStringExt.h */,
-				2B9CF50D17D7A36F00B0AFE3 /* NSStringExt.m */,
-				2BA819C517D85821002F5999 /* NSArrayExt.h */,
-				2BA819C617D85821002F5999 /* NSArrayExt.m */,
-				2BA819CB17D86435002F5999 /* NSDictionaryExt.h */,
-				2BA819CC17D86435002F5999 /* NSDictionaryExt.m */,
-				2BA819CE17D866B0002F5999 /* NSDateExt.h */,
-				2BA819CF17D866B0002F5999 /* NSDateExt.m */,
-				2BFDBC7E17D8719700AE0A6A /* arccat.h */,
-			);
-			path = Ext;
-			sourceTree = "<group>";
-		};
-		2B9CF50E17D7A36F00B0AFE3 /* UnitTest */ = {
-			isa = PBXGroup;
-			children = (
-				2BA819B417D83C1B002F5999 /* UnitTest.h */,
-				2BA819B517D83C1B002F5999 /* UnitTest.m */,
-				2BA819BC17D844E2002F5999 /* Logger.h */,
-				2BA819BD17D844E2002F5999 /* Logger.m */,
-			);
-			path = UnitTest;
-			sourceTree = "<group>";
-		};
 		2BA819B717D83CB5002F5999 /* TestCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +222,7 @@
 				2BA819C317D855E6002F5999 /* TestDictionary.m */,
 				2BA819C917D86133002F5999 /* TestArray.m */,
 				2BA819D217D866ED002F5999 /* TestDate.m */,
+				2B69E87917D9360F0077AB87 /* TestObject.m */,
 			);
 			path = ExtTestCases;
 			sourceTree = "<group>";
@@ -271,17 +297,21 @@
 				2B9CF4F117D7A24C00B0AFE3 /* main.m in Sources */,
 				2B9CF4F517D7A24C00B0AFE3 /* AppDelegate.m in Sources */,
 				2B9CF4FE17D7A24C00B0AFE3 /* ViewController.m in Sources */,
-				2B9CF50F17D7A36F00B0AFE3 /* NSStringExt.m in Sources */,
-				2BA819B617D83C1B002F5999 /* UnitTest.m in Sources */,
 				2BA819BB17D83CCD002F5999 /* TestString.m in Sources */,
-				2BA819BE17D844E2002F5999 /* Logger.m in Sources */,
 				2BA819C117D85069002F5999 /* TestNumber.m in Sources */,
 				2BA819C417D855E6002F5999 /* TestDictionary.m in Sources */,
-				2BA819C717D85821002F5999 /* NSArrayExt.m in Sources */,
 				2BA819CA17D86133002F5999 /* TestArray.m in Sources */,
-				2BA819CD17D86435002F5999 /* NSDictionaryExt.m in Sources */,
-				2BA819D017D866B0002F5999 /* NSDateExt.m in Sources */,
 				2BA819D317D866ED002F5999 /* TestDate.m in Sources */,
+				2B69E83717D92DF70077AB87 /* NSArrayExt.m in Sources */,
+				2B69E83817D92DF70077AB87 /* NSDateExt.m in Sources */,
+				2B69E83917D92DF70077AB87 /* NSDictionaryExt.m in Sources */,
+				2B69E83A17D92DF70077AB87 /* NSStringExt.m in Sources */,
+				2B69E83B17D92DF70077AB87 /* UnitTestUI.m in Sources */,
+				2B69E83C17D92DF70077AB87 /* Logger.m in Sources */,
+				2B69E83D17D92DF70077AB87 /* UnitTest.m in Sources */,
+				2B69E87417D930950077AB87 /* NSObjectExt.m in Sources */,
+				2B69E87717D931220077AB87 /* NSClassExt.m in Sources */,
+				2B69E87A17D9360F0077AB87 /* TestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

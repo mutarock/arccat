@@ -7,9 +7,9 @@
 //
 
 #import "UnitTest.h"
+#import "Logger.h"
 #import "objc/runtime.h"
 #import "objc/message.h"
-#import "Logger.h"
 
 @implementation UnitTest
 

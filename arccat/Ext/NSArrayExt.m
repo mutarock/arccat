@@ -54,6 +54,18 @@
     return [NSString stringWithFormat:@"[%@]", [ary join:COMMA_SPACE]];
 }
 
+-(id) first {
+    return [self objectAtIndex:0];
+}
+
+-(id) second {
+    return [self objectAtIndex:1];
+}
+
+-(id) third {
+    return [self objectAtIndex:2];
+}
+
 @end
 
 

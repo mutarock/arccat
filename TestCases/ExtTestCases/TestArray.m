@@ -49,6 +49,9 @@
     assert_equal(@[], [ary slice:3 :1]);
     assert_equal(@"b,c", [[ary slice:1 :2] join:COMMA]);
     assert_equal(@"c b a", [ary.reverse join:SPACE]);
+    assert_equal(@"a", ary.first);
+    assert_equal(@"b", ary.second);
+    assert_equal(@"c", ary.third);
 }
 
 @end
