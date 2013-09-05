@@ -117,14 +117,14 @@
                 break;
             case _C_INT:
                 if (_C_DBL == gotTypeCode[0]) {
-                    equals = [[NSNumber numberWithInt:(int)expected.nonretainedObjectValue] isEqualToNumber:(NSNumber*)got];
+                    equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
                 } else {
                     equals = [expected isEqualToValue:got];
                 }
                 break;
             case _C_DBL:
                 if (_C_INT == gotTypeCode[0]) {
-                    equals = [[NSNumber numberWithInt:(int)got.nonretainedObjectValue] isEqualToNumber:(NSNumber*)expected];
+                    equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
                 } else {
                     equals = [expected isEqualToValue:got];
                 }
