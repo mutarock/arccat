@@ -20,9 +20,20 @@
 		2B9CF50117D7A24D00B0AFE3 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CF4FF17D7A24D00B0AFE3 /* ViewController_iPhone.xib */; };
 		2B9CF50417D7A24D00B0AFE3 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CF50217D7A24D00B0AFE3 /* ViewController_iPad.xib */; };
 		2B9CF50F17D7A36F00B0AFE3 /* NSStringExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CF50D17D7A36F00B0AFE3 /* NSStringExt.m */; };
+		2BA819B617D83C1B002F5999 /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819B517D83C1B002F5999 /* UnitTest.m */; };
+		2BA819BB17D83CCD002F5999 /* TestString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819BA17D83CCD002F5999 /* TestString.m */; };
+		2BA819BE17D844E2002F5999 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819BD17D844E2002F5999 /* Logger.m */; };
+		2BA819C117D85069002F5999 /* TestNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C017D85069002F5999 /* TestNumber.m */; };
+		2BA819C417D855E6002F5999 /* TestDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C317D855E6002F5999 /* TestDictionary.m */; };
+		2BA819C717D85821002F5999 /* NSArrayExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C617D85821002F5999 /* NSArrayExt.m */; };
+		2BA819CA17D86133002F5999 /* TestArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C917D86133002F5999 /* TestArray.m */; };
+		2BA819CD17D86435002F5999 /* NSDictionaryExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819CC17D86435002F5999 /* NSDictionaryExt.m */; };
+		2BA819D017D866B0002F5999 /* NSDateExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819CF17D866B0002F5999 /* NSDateExt.m */; };
+		2BA819D317D866ED002F5999 /* TestDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819D217D866ED002F5999 /* TestDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B51B5D617D8C80A00C4A52D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2B9CF4E117D7A24C00B0AFE3 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9CF4E417D7A24C00B0AFE3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B9CF4E617D7A24C00B0AFE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,6 +53,22 @@
 		2B9CF50317D7A24D00B0AFE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		2B9CF50C17D7A36F00B0AFE3 /* NSStringExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExt.h; sourceTree = "<group>"; };
 		2B9CF50D17D7A36F00B0AFE3 /* NSStringExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExt.m; sourceTree = "<group>"; };
+		2BA819B417D83C1B002F5999 /* UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
+		2BA819B517D83C1B002F5999 /* UnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
+		2BA819BA17D83CCD002F5999 /* TestString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestString.m; sourceTree = "<group>"; };
+		2BA819BC17D844E2002F5999 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		2BA819BD17D844E2002F5999 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		2BA819C017D85069002F5999 /* TestNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNumber.m; sourceTree = "<group>"; };
+		2BA819C317D855E6002F5999 /* TestDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDictionary.m; sourceTree = "<group>"; };
+		2BA819C517D85821002F5999 /* NSArrayExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExt.h; sourceTree = "<group>"; };
+		2BA819C617D85821002F5999 /* NSArrayExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExt.m; sourceTree = "<group>"; };
+		2BA819C917D86133002F5999 /* TestArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestArray.m; sourceTree = "<group>"; };
+		2BA819CB17D86435002F5999 /* NSDictionaryExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryExt.h; sourceTree = "<group>"; };
+		2BA819CC17D86435002F5999 /* NSDictionaryExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryExt.m; sourceTree = "<group>"; };
+		2BA819CE17D866B0002F5999 /* NSDateExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateExt.h; sourceTree = "<group>"; };
+		2BA819CF17D866B0002F5999 /* NSDateExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateExt.m; sourceTree = "<group>"; };
+		2BA819D217D866ED002F5999 /* TestDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDate.m; sourceTree = "<group>"; };
+		2BFDBC7E17D8719700AE0A6A /* arccat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arccat.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +88,8 @@
 		2B9CF4D817D7A24C00B0AFE3 = {
 			isa = PBXGroup;
 			children = (
+				2B51B5D617D8C80A00C4A52D /* README.md */,
+				2BA819B717D83CB5002F5999 /* TestCases */,
 				2B9CF50A17D7A36F00B0AFE3 /* arccat */,
 				2B9CF4EA17D7A24C00B0AFE3 /* TestApp */,
 				2B9CF4E317D7A24C00B0AFE3 /* Frameworks */,
@@ -129,6 +158,13 @@
 			children = (
 				2B9CF50C17D7A36F00B0AFE3 /* NSStringExt.h */,
 				2B9CF50D17D7A36F00B0AFE3 /* NSStringExt.m */,
+				2BA819C517D85821002F5999 /* NSArrayExt.h */,
+				2BA819C617D85821002F5999 /* NSArrayExt.m */,
+				2BA819CB17D86435002F5999 /* NSDictionaryExt.h */,
+				2BA819CC17D86435002F5999 /* NSDictionaryExt.m */,
+				2BA819CE17D866B0002F5999 /* NSDateExt.h */,
+				2BA819CF17D866B0002F5999 /* NSDateExt.m */,
+				2BFDBC7E17D8719700AE0A6A /* arccat.h */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -136,8 +172,33 @@
 		2B9CF50E17D7A36F00B0AFE3 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				2BA819B417D83C1B002F5999 /* UnitTest.h */,
+				2BA819B517D83C1B002F5999 /* UnitTest.m */,
+				2BA819BC17D844E2002F5999 /* Logger.h */,
+				2BA819BD17D844E2002F5999 /* Logger.m */,
 			);
 			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		2BA819B717D83CB5002F5999 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				2BA819B817D83CB5002F5999 /* ExtTestCases */,
+			);
+			name = TestCases;
+			path = ../TestCases;
+			sourceTree = "<group>";
+		};
+		2BA819B817D83CB5002F5999 /* ExtTestCases */ = {
+			isa = PBXGroup;
+			children = (
+				2BA819BA17D83CCD002F5999 /* TestString.m */,
+				2BA819C017D85069002F5999 /* TestNumber.m */,
+				2BA819C317D855E6002F5999 /* TestDictionary.m */,
+				2BA819C917D86133002F5999 /* TestArray.m */,
+				2BA819D217D866ED002F5999 /* TestDate.m */,
+			);
+			path = ExtTestCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +272,16 @@
 				2B9CF4F517D7A24C00B0AFE3 /* AppDelegate.m in Sources */,
 				2B9CF4FE17D7A24C00B0AFE3 /* ViewController.m in Sources */,
 				2B9CF50F17D7A36F00B0AFE3 /* NSStringExt.m in Sources */,
+				2BA819B617D83C1B002F5999 /* UnitTest.m in Sources */,
+				2BA819BB17D83CCD002F5999 /* TestString.m in Sources */,
+				2BA819BE17D844E2002F5999 /* Logger.m in Sources */,
+				2BA819C117D85069002F5999 /* TestNumber.m in Sources */,
+				2BA819C417D855E6002F5999 /* TestDictionary.m in Sources */,
+				2BA819C717D85821002F5999 /* NSArrayExt.m in Sources */,
+				2BA819CA17D86133002F5999 /* TestArray.m in Sources */,
+				2BA819CD17D86435002F5999 /* NSDictionaryExt.m in Sources */,
+				2BA819D017D866B0002F5999 /* NSDateExt.m in Sources */,
+				2BA819D317D866ED002F5999 /* TestDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +414,7 @@
 				2B9CF50917D7A24D00B0AFE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

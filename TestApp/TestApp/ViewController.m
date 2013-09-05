@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "NSStringExt.h"
 
 @interface ViewController ()
 
@@ -19,9 +18,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    NSLog(@"%d", [@[@"a", @"b", @"c"] isEqualToArray:[@"a b c" split:@" "]]);
-    NSLog(@"%@", [@"a b c" split:@" "]);
 }
 
 - (void)didReceiveMemoryWarning
