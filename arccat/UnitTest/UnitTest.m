@@ -85,25 +85,46 @@
     print_log_info(@"\n%d tests, %d assertions, %d failures, %d errors\n", UnitTestManager.sharedInstance.tests, UnitTestManager.sharedInstance.assertions, UnitTestManager.sharedInstance.failures, UnitTestManager.sharedInstance.errors);
 }
 
++(BOOL) areEqual:(NSValue*)expected :(NSValue*)got {
+    BOOL equals = false;
+    if ([[expected nonretainedObjectValue] isKindOfClass:[NSArray class]]) {
+        equals = [[expected nonretainedObjectValue] isEqualToArray:[got nonretainedObjectValue]];
+    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSDictionary class]]) {
+        equals = [[expected nonretainedObjectValue] isEqualToDictionary:[got nonretainedObjectValue]];
+    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSString class]]) {
+        equals = [[expected nonretainedObjectValue] isEqualToString:[got nonretainedObjectValue]];
+    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSNumber class]]) {
+        equals = [[expected nonretainedObjectValue] isEqualToNumber:[got nonretainedObjectValue]];
+    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSDate class]]) {
+        equals = [[expected nonretainedObjectValue] isEqualToDate:[got nonretainedObjectValue]];
+    } else {
+        equals = [expected isEqualToValue:got];
+    }
+    return equals;
+}
+
 +(void) assert:(NSValue*)got equals:(NSValue*)expected message:(NSString*)message inFile:(NSString*)file atLine:(int)line {
     UnitTestManager.sharedInstance.assertions += 1;
     BOOL equals = false;
     if (nil == expected && nil == got) {
         equals = true;
     } else {
-        const char* code = [expected objCType];
-        switch (code[0]) {
+        const char* expectedTypeCode = [expected objCType];
+        const char* gotTypeCode = [got objCType];
+        switch (expectedTypeCode[0]) {
             case _C_ID:
-                if ([[expected nonretainedObjectValue] isKindOfClass:[NSArray class]]) {
-                    equals = [[expected nonretainedObjectValue] isEqualToArray:[got nonretainedObjectValue]];
-                } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSDictionary class]]) {
-                    equals = [[expected nonretainedObjectValue] isEqualToDictionary:[got nonretainedObjectValue]];
-                } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSString class]]) {
-                    equals = [[expected nonretainedObjectValue] isEqualToString:[got nonretainedObjectValue]];
-                } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSNumber class]]) {
-                    equals = [[expected nonretainedObjectValue] isEqualToNumber:[got nonretainedObjectValue]];
-                } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSDate class]]) {
-                    equals = [[expected nonretainedObjectValue] isEqualToDate:[got nonretainedObjectValue]];
+                equals = [self areEqual:expected :got];
+                break;
+            case _C_INT:
+                if (_C_DBL == gotTypeCode[0]) {
+                    equals = [[NSNumber numberWithInt:(int)expected.nonretainedObjectValue] isEqualToNumber:(NSNumber*)got];
+                } else {
+                    equals = [expected isEqualToValue:got];
+                }
+                break;
+            case _C_DBL:
+                if (_C_INT == gotTypeCode[0]) {
+                    equals = [[NSNumber numberWithInt:(int)got.nonretainedObjectValue] isEqualToNumber:(NSNumber*)expected];
                 } else {
                     equals = [expected isEqualToValue:got];
                 }

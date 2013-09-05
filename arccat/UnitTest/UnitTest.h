@@ -48,6 +48,7 @@ do { \
 +(void) runAllTests ;
 +(void) runTests:(id)target ;
 +(void) runTest:(id)target withName:(NSString*)name ;
++(BOOL) areEqual:(NSValue*)expected :(NSValue*)got ;
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line ;
 +(void) assert:(NSValue*)got equals:(NSValue*)expected message:(NSString*)message inFile:(NSString*)file atLine:(int)line ;
 +(NSValue*) valueWithBytes:(const void *)value objCType:(const char *)type ;
