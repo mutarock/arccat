@@ -52,6 +52,7 @@
     assert_equal(@"a", ary.first);
     assert_equal(@"b", ary.second);
     assert_equal(@"c", ary.third);
+    assert_equal(@"c", ary.last);
 }
 
 @end

@@ -10,12 +10,20 @@
 
 @implementation UnitTest (UI)
 
-+(void) run:(UIViewController*)viewController {
++(void) run:(id)ui {
     [self run];
     if (UnitTestManager.sharedInstance.assertions > 0) {
-        viewController.view.backgroundColor =
-        (0 == UnitTestManager.sharedInstance.failures) ?
-        [UIColor colorWithRed:0.13 green:0.63 blue:0.13 alpha:1] : [UIColor redColor];
+        UIView* view = nil;
+        if ([ui isKindOfClass:[UIViewController class]]) {
+            view = ((UIViewController*)ui).view;
+        } else if ([ui isKindOfClass:[UIView class]]) {
+            view = ui;
+        }
+        if (nil != view) {
+                view.backgroundColor =
+                    (0 == UnitTestManager.sharedInstance.failures) ?
+                        [UIColor colorWithRed:0.13 green:0.63 blue:0.13 alpha:1] : [UIColor redColor];
+        }
     }
 }
 

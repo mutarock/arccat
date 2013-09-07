@@ -14,16 +14,17 @@
 
 @implementation TestObject
 
-+(void) class_method {
+-(void) test_methods {
+    assert_equal(@"TestObject", self.className);
+    assert_equal(@[@"+(id) class_method:(int)intValue ;"], self.classMethods);
+    assert_equal(@[@"-(void) test_methods ;"], self.methods);
+
 }
 
--(void) test_methods {
-    NSArray* classMethods = [self classMethods];
-    NSArray* methods = [self methods];
 
-    assert_equal(@[@"+(void) class_method ;"], classMethods);
-    assert_equal(@[@"-(void) test_methods ;"], methods);
 
++(NSString*) class_method:(int)n {
+    return @"hello";
 }
 
 @end

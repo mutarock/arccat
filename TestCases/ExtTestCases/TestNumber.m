@@ -7,12 +7,24 @@
 //
 
 #import "UnitTest.h"
+#import "NSNumberExt.h"
 
 @interface TestNumber : NSObject @end
 
 
 
 @implementation TestNumber
+
+-(void) test_number_ext {
+    assert_equal(@1, [@1.3 roundUp]);
+    assert_equal(@2, [@1.6 roundUp]);
+
+    assert_equal(@2, [@1.3 ceiling]);
+    assert_equal(@2, [@1.6 ceiling]);
+
+    assert_equal(@1, [@1.3 floorDown]);
+    assert_equal(@1, [@1.6 floorDown]);
+}
 
 -(void) test_number {
     assert_equal(3, 1+2);

@@ -12,6 +12,10 @@
 
 @implementation NSObject (Ext)
 
+-(NSString*) className {
+    return NSStringFromClass([self class]);
+}
+
 -(NSArray*) methods {
     return [NSClassExt methodsForClass:[self class]];
 }

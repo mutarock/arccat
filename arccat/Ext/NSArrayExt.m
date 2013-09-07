@@ -66,6 +66,10 @@
     return [self objectAtIndex:2];
 }
 
+-(id) last {
+    return [self lastObject];
+}
+
 @end
 
 

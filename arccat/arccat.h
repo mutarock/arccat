@@ -3,6 +3,7 @@
 #import "NSDateExt.h"
 #import "NSDictionaryExt.h"
 #import "NSStringExt.h"
+#import "NSNumberExt.h"
 
 // UI
 #import "UnitTestUI.h"

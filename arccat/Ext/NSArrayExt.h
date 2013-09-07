@@ -20,6 +20,7 @@
 -(id) first ;
 -(id) second ;
 -(id) third ;
+-(id) last ;
 
 @end
 

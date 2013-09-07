@@ -1,5 +1,5 @@
 //
-//  UnitTestUI.h
+//  NSNumberExt.h
 //  TestApp
 //
 //  Created by ssukcha on 06/09/13.
@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UnitTest.h"
 
-@interface UnitTest (UI)
+@interface NSNumber (Ext)
 
-+(void) run:(id)ui ;
+-(NSNumber*) next ;
+-(NSNumber*) roundUp ;
+-(NSNumber*) ceiling ;
+-(NSNumber*) floorDown ;
 
 @end

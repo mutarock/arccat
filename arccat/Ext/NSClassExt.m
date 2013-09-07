@@ -10,7 +10,6 @@
 #import "NSStringExt.h"
 #import "NSArrayExt.h"
 #import "objc/runtime.h"
-//#import "objc/message.h"
 
 NSInteger sortByFirstObjectComparator(NSArray* uno, NSArray* dos, void* context) {
     return [[uno first] compare:[dos first]];
@@ -115,7 +114,7 @@ NSString* TypeEncodingDescription(char* code) {
 				NSString* shortArgStr;
 				NSRange range = [argString rangeOfCharacterFromSet:[NSCharacterSet uppercaseLetterCharacterSet] options:NSBackwardsSearch];
 				if (NSNotFound == range.location) {
-					shortArgStr = argString;
+					shortArgStr = SWF(@"%@Value", argTypeString);
 				} else {
 					shortArgStr = [[argString substringFromIndex:range.location] lowercaseString];
 				}
@@ -132,7 +131,7 @@ NSString* TypeEncodingDescription(char* code) {
 		[ary addObject:@[selName, retStr]];
 		retStrMax = MAX(retStrMax, retStr.length);
 	}
-//	free(methods);
+	free(methods);
 	NSMutableArray* ret = [NSMutableArray array];
 	for (NSArray* pair in [ary sortedArrayUsingFunction:sortByFirstObjectComparator context:nil]) {
 		[ret addObject:SWF(@"%@ %@ ;", [[pair second] ljust:retStrMax], [pair first])];

@@ -10,6 +10,7 @@
 
 @interface NSObject (Ext)
 
+-(NSString*) className ;
 -(NSArray*) classMethods ;
 -(NSArray*) methods ;
 

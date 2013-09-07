@@ -34,6 +34,7 @@
 		2BA819C417D855E6002F5999 /* TestDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C317D855E6002F5999 /* TestDictionary.m */; };
 		2BA819CA17D86133002F5999 /* TestArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819C917D86133002F5999 /* TestArray.m */; };
 		2BA819D317D866ED002F5999 /* TestDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA819D217D866ED002F5999 /* TestDate.m */; };
+		2BD6FBE517D96D02005476A6 /* NSNumberExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD6FBE417D96D02005476A6 /* NSNumberExt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		2BA819C317D855E6002F5999 /* TestDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDictionary.m; sourceTree = "<group>"; };
 		2BA819C917D86133002F5999 /* TestArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestArray.m; sourceTree = "<group>"; };
 		2BA819D217D866ED002F5999 /* TestDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDate.m; sourceTree = "<group>"; };
+		2BD6FBE317D96D02005476A6 /* NSNumberExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExt.h; sourceTree = "<group>"; };
+		2BD6FBE417D96D02005476A6 /* NSNumberExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberExt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				2B69E87317D930950077AB87 /* NSObjectExt.m */,
 				2B69E87517D931220077AB87 /* NSClassExt.h */,
 				2B69E87617D931220077AB87 /* NSClassExt.m */,
+				2BD6FBE317D96D02005476A6 /* NSNumberExt.h */,
+				2BD6FBE417D96D02005476A6 /* NSNumberExt.m */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				2B69E87417D930950077AB87 /* NSObjectExt.m in Sources */,
 				2B69E87717D931220077AB87 /* NSClassExt.m in Sources */,
 				2B69E87A17D9360F0077AB87 /* TestObject.m in Sources */,
+				2BD6FBE517D96D02005476A6 /* NSNumberExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
