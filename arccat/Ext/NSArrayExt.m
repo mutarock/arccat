@@ -70,6 +70,14 @@
     return [self lastObject];
 }
 
+-(NSArray*) append:(NSArray*)ary {
+    return [self arrayByAddingObjectsFromArray:ary];
+}
+
+-(NSArray*) sort {
+	return [self sortedArrayUsingSelector:@selector(compare:)];
+}
+
 @end
 
 

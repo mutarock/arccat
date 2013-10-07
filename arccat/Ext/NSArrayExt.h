@@ -21,6 +21,8 @@
 -(id) second ;
 -(id) third ;
 -(id) last ;
+-(NSArray*) append:(NSArray*)ary ;
+-(NSArray*) sort ;
 
 @end
 

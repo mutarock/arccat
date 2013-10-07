@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSValueExt.h"
 
 #define __FILENAME__ (strrchr(__FILE__,'/')+1)
 #define assert_equal(expected, got) \
 do { \
     __typeof__(expected) __expected = (expected); \
     __typeof__(got) __got = (got); \
-    NSValue* expected_encoded = [UnitTest valueWithBytes:&__expected objCType: @encode(__typeof__(expected))]; \
-    NSValue* got_encoded = [UnitTest valueWithBytes:&__got objCType: @encode(__typeof__(got))]; \
-    [UnitTest assert:got_encoded equals:expected_encoded inFile:[NSString stringWithUTF8String:__FILENAME__] atLine:__LINE__]; \
+    NSValue* expectedEncoded = [NSValue valueWithAny:&__expected objCType: @encode(__typeof__(expected))]; \
+    NSValue* gotEncoded = [NSValue valueWithAny:&__got objCType: @encode(__typeof__(got))]; \
+    [UnitTest assert:gotEncoded equals:expectedEncoded inFile:[NSString stringWithUTF8String:__FILENAME__] atLine:__LINE__]; \
 } while(0)
 
 
@@ -51,7 +52,5 @@ do { \
 +(BOOL) areEqual:(NSValue*)expected :(NSValue*)got ;
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line ;
 +(void) assert:(NSValue*)got equals:(NSValue*)expected message:(NSString*)message inFile:(NSString*)file atLine:(int)line ;
-+(NSValue*) valueWithBytes:(const void *)value objCType:(const char *)type ;
-+(NSString*) valueDescription:(NSValue*)value ;
 
 @end

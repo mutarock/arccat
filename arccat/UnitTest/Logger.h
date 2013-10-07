@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #define FILENAME_PADDING 23
+#define __FILENAME__ (strrchr(__FILE__,'/')+1)
 
 #define print_log_info(const_chars_fmt, ...) stdout_log_info(0, __FILENAME__, __LINE__, const_chars_fmt, ##__VA_ARGS__)
 #define log_info(const_chars_fmt, ...) stdout_log_info(1, __FILENAME__, __LINE__, const_chars_fmt, ##__VA_ARGS__)

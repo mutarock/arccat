@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "NSValueExt.h"
 
 #define EMPTY_STRING     @""
 #define SPACE            @" "
@@ -53,6 +53,7 @@ NSArray* _w(NSString* str) ;
 
 -(NSString*) strip ;
 -(NSArray*) split:(NSString*)sep ;
+-(NSArray*) each_chars ;
 -(NSString*) reverse ;
 -(NSString*) slice:(int)loc :(int)length_ ;
 -(NSString*) slice:(int)loc backward:(int)backward ;

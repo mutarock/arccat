@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#define FIXNUM(num)		[NSNumber numberWithInt:num]
+int get_random(int div) ;
+
 @interface NSNumber (Ext)
 
 -(NSNumber*) next ;
 -(NSNumber*) roundUp ;
 -(NSNumber*) ceiling ;
 -(NSNumber*) floorDown ;
+-(NSString*) to_s ;
 
 @end

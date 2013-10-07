@@ -8,6 +8,11 @@
 
 #import "NSNumberExt.h"
 
+
+int get_random(int div) {
+	return (arc4random() % div);
+}
+
 @implementation NSNumber (Ext)
 
 -(NSNumber*) next {
@@ -27,6 +32,10 @@
 -(NSNumber*) floorDown {
     double value = floor([self doubleValue]);
     return [NSNumber numberWithDouble:value];
+}
+
+-(NSString*) to_s {
+    return [self description];
 }
 
 @end

@@ -56,6 +56,18 @@
     return false;
 }
 
+-(id) keyForObject:(id)obj {
+	NSEnumerator* enumerator = [self keyEnumerator];
+	id key;
+	while ((key = [enumerator nextObject])) {
+		id objectForKey = [self objectForKey:key];
+		if ([objectForKey isEqual:obj]) {
+			return key;
+		}
+	}
+	return nil;
+}
+
 -(id) fetch:(id)key {
     return [self objectForKey:key];
 }

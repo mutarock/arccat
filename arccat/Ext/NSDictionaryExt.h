@@ -15,6 +15,7 @@
 -(NSString*) to_s ;
 -(NSArray*) to_array ;
 -(BOOL) hasKey:(id)key ;
+-(id) keyForObject:(id)obj ;
 -(id) fetch:(id)key ;
 
 @end

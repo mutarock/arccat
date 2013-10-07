@@ -10,6 +10,7 @@
 #import "Logger.h"
 #import "objc/runtime.h"
 #import "objc/message.h"
+#import "NSValueExt.h"
 
 @implementation UnitTest
 
@@ -116,14 +117,15 @@
                 equals = [self areEqual:expected :got];
                 break;
             case _C_INT:
-                if (_C_DBL == gotTypeCode[0]) {
+                if (_C_DBL == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
                     equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
                 } else {
                     equals = [expected isEqualToValue:got];
                 }
                 break;
+            case _C_FLT:
             case _C_DBL:
-                if (_C_INT == gotTypeCode[0]) {
+                if (_C_INT == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
                     equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
                 } else {
                     equals = [expected isEqualToValue:got];
@@ -139,7 +141,7 @@
         if (UnitTestManager.sharedInstance.dot_if_passed) {
             print_log_info(@".");
         } else {
-            print_log_info(@"%@%d%@%@", file, line, @"passed: %@", [self valueDescription:got]);
+            print_log_info(@"%@%d%@%@", file, line, @"passed: %@", [got valueDescription]);
         }
     } else {
         UnitTestManager.sharedInstance.failures += 1;
@@ -147,67 +149,16 @@
         
         NSString* expected_message;
         if (nil == message) {
-            expected_message = [self valueDescription:expected];
+            expected_message = [expected valueDescription];
         } else {
             expected_message = message;
         }
-        print_log_info(@"%@ #%03d\nAssertion failed\nExpected: %@\nGot: %@\n", file, line, expected_message, [self valueDescription:got]);
+        print_log_info(@"%@ #%03d\nAssertion failed\nExpected: %@\nGot: %@\n", file, line, expected_message, [got valueDescription]);
     }
 }
 
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line {
     return [self assert:got equals:expected message:nil inFile:file atLine:line];
-}
-
-+(NSValue*) valueWithBytes:(const void *)value objCType:(const char *)type {
-	switch (*type) {
-		case _C_CHR: // BOOL, char
-			if (1 == (size_t)value) {
-				return [NSNumber numberWithBool:TRUE];
-			} else if (NULL == value) {
-				return [NSNumber numberWithBool:FALSE];
-			} else {
-				return [NSNumber numberWithChar:*(char *)value];
-			}
-		case _C_UCHR: return [NSNumber numberWithUnsignedChar:*(unsigned char *)value];
-		case _C_SHT: return [NSNumber numberWithShort:*(short *)value];
-		case _C_USHT: return [NSNumber numberWithUnsignedShort:*(unsigned short *)value];
-		case _C_INT:
-			return [NSNumber numberWithInt:*(int *)value];
-		case _C_UINT: return [NSNumber numberWithUnsignedInt:*(unsigned *)value];
-		case _C_LNG: return [NSNumber numberWithLong:*(long *)value];
-		case _C_ULNG: return [NSNumber numberWithUnsignedLong:*(unsigned long *)value];
-		case _C_LNG_LNG: return [NSNumber numberWithLongLong:*(long long *)value];
-		case _C_ULNG_LNG: return [NSNumber numberWithUnsignedLongLong:*(unsigned long long *)value];
-		case _C_FLT:
-			return [NSNumber numberWithFloat:*(float *)value];
-		case _C_DBL:
-            return [NSNumber numberWithDouble:*(double *)value];
-		case _C_ID:
-			if (nil == value) {
-				return nil;
-			} else {
-				//return *(id *)value;
-                return [NSValue valueWithBytes:value objCType:type];;
-			}
-		case _C_PTR:
-		case _C_STRUCT_B:
-		case _C_ARY_B:
-			if (NULL == value) {
-				return nil;
-			} else {
-				return [NSValue valueWithBytes:value objCType:type];
-			}
-	}
-	return [NSValue valueWithBytes:value objCType:type];
-}
-
-+(NSString*) valueDescription:(NSValue*)value {
-    if (!strcmp("@", [value objCType])) {
-        return [value nonretainedObjectValue];
-    } else {
-        return [value description];
-    }
 }
 
 @end

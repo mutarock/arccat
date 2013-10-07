@@ -9,6 +9,7 @@
 #import "NSStringExt.h"
 #import "NSArrayExt.h"
 
+
 NSString* SWF(NSString* format, ...) {
     va_list args;
     va_start(args, format);
@@ -23,8 +24,6 @@ NSString* SWF(NSString* format, ...) {
 NSArray* _w(NSString* str) {
     return [[str strip] componentsSeparatedByString:SPACE];
 }
-
-
 
 @implementation NSString (Ext)
 
@@ -47,6 +46,10 @@ NSArray* _w(NSString* str) {
     } else {
         return [self componentsSeparatedByString:sep];
     }
+}
+
+-(NSArray*) each_chars {
+	return [self split:EMPTY_STRING];
 }
 
 -(NSString*) reverse {
