@@ -11,9 +11,7 @@
 #import "NSArrayExt.h"
 #import "objc/runtime.h"
 
-NSInteger sortByFirstObjectComparator(NSArray* uno, NSArray* dos, void* context) {
-    return [[uno first] compare:[dos first]];
-}
+
 
 NSString* TypeEncodingDescription(char* code) ;
 NSString* TypeEncodingDescription(char* code) {

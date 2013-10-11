@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
+
+NSInteger sortByFirstObjectComparator(NSArray* uno, NSArray* dos, void* context) ;
+
 @interface NSArray (Ext)
 
 -(NSArray*) reverse ;

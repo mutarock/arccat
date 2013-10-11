@@ -9,6 +9,12 @@
 #import "NSArrayExt.h"
 #import "NSStringExt.h"
 
+
+NSInteger sortByFirstObjectComparator(NSArray* uno, NSArray* dos, void* context) {
+    return [[uno first] compare:[dos first]];
+}
+
+
 @implementation NSArray (Ext)
 
 -(NSArray*) reverse {
