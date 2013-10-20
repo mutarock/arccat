@@ -39,7 +39,6 @@
 			if (nil == value) {
 				return nil;
 			} else {
-				//return *(id *)value;
                 return [NSValue valueWithBytes:value objCType:type];;
 			}
 		case _C_PTR:
@@ -56,7 +55,11 @@
 
 -(NSString*) valueDescription {
     if (!strcmp("@", [self objCType])) {
-        return [self nonretainedObjectValue];
+        if (nil == [self nonretainedObjectValue]) {
+            return @"nil";
+        } else {
+            return [self nonretainedObjectValue];
+        }
     } else {
         return [self description];
     }

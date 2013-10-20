@@ -14,10 +14,7 @@
     [self run];
     if (UnitTestManager.sharedInstance.assertions > 0) {
         UIView* view = nil;
-        if ([ui conformsToProtocol:@protocol(UIApplicationDelegate)]) {
-            UIViewController* vc = [[[UIApplication sharedApplication].windows objectAtIndex:0] rootViewController];
-            view = vc.view;
-        } else if ([ui isKindOfClass:[UIWindow class]]) {
+        if ([ui conformsToProtocol:@protocol(UIApplicationDelegate)] || [ui isKindOfClass:[UIApplication class]] || [ui isKindOfClass:[UIWindow class]]) {
             UIViewController* vc = [[[UIApplication sharedApplication].windows objectAtIndex:0] rootViewController];
             view = vc.view;
         } else if ([ui isKindOfClass:[UIView class]]) {

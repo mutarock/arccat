@@ -131,6 +131,13 @@
                     equals = [expected isEqualToValue:got];
                 }
                 break;
+            case _C_PTR:
+                if (nil==[expected nonretainedObjectValue] && nil==[got nonretainedObjectValue]) {
+                    equals = true;
+                } else {
+                    equals = [expected isEqualToValue:got];
+                }
+                break;
             default:
                 equals = [expected isEqualToValue:got];
                 break;
