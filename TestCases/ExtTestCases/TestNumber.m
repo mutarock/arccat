@@ -26,6 +26,10 @@
     assert_equal(@1, [@1.6 floorDown]);
 }
 
+-(void) test_enum {
+    assert_equal([NSNumber numberWithInt:NSTextAlignmentCenter], Enum(NSTextAlignmentCenter));
+}
+
 -(void) test_number {
     assert_equal(3, 1+2);
     assert_equal(3.14, 3.14);

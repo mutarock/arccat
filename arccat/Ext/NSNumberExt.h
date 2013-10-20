@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#define FIXNUM(num)		[NSNumber numberWithInt:num]
+#define FIXNUM(num)     [NSNumber numberWithInt:num]
+#define Enum(enum)      [NSNumber numberWithInt:enum]
+
+
 int get_random(int div) ;
 
 @interface NSNumber (Ext)
