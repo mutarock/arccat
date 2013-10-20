@@ -8,15 +8,6 @@
 
 #import "Logger.h"
 
-#define assert_equal(expected, got) \
-do { \
-__typeof__(expected) __expected = (expected); \
-__typeof__(got) __got = (got); \
-NSValue* expectedEncoded = [NSValue valueWithAny:&__expected objCType: @encode(__typeof__(expected))]; \
-NSValue* gotEncoded = [NSValue valueWithAny:&__got objCType: @encode(__typeof__(got))]; \
-[UnitTest assert:gotEncoded equals:expectedEncoded inFile:[NSString stringWithUTF8String:__FILENAME__] atLine:__LINE__]; \
-} while(0)
-
 void stdout_log_info(BOOL filename_lineno_flag, const char* filename, int lineno, id format, ...) {
 #if LOGGER_OFF
     return;
