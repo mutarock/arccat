@@ -14,10 +14,16 @@
     [self run];
     if (UnitTestManager.sharedInstance.assertions > 0) {
         UIView* view = nil;
-        if ([ui isKindOfClass:[UIViewController class]]) {
-            view = ((UIViewController*)ui).view;
+        if ([ui conformsToProtocol:@protocol(UIApplicationDelegate)]) {
+            UIViewController* vc = [[[UIApplication sharedApplication].windows objectAtIndex:0] rootViewController];
+            view = vc.view;
+        } else if ([ui isKindOfClass:[UIWindow class]]) {
+            UIViewController* vc = [[[UIApplication sharedApplication].windows objectAtIndex:0] rootViewController];
+            view = vc.view;
         } else if ([ui isKindOfClass:[UIView class]]) {
             view = ui;
+        } else if ([ui isKindOfClass:[UIViewController class]]) {
+            view = ((UIViewController*)ui).view;
         }
         if (nil != view) {
                 view.backgroundColor =

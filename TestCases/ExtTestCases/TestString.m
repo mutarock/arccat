@@ -29,6 +29,9 @@
     assert_equal(3.14f, @"3.14".to_float);
     assert_equal(3.14f, @"3.14f".to_float);
     assert_equal(3.14, @"3.14".to_double);
+
+    CGRect rect = CGRectFromString(@"NSRect: {{1, 2}, {3, 5}}");
+    assert_equal(@"NSRect: {{1, 2}, {3, 5}}", to_s(rect));
     
     NSArray* expected = @[@"a", @"b", @"c"];
     assert_equal(expected, [@"a b c" split:@" "]);

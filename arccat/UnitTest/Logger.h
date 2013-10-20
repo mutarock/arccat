@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSStringExt.h"
+
 #define FILENAME_PADDING 23
 #define __FILENAME__ (strrchr(__FILE__,'/')+1)
 
