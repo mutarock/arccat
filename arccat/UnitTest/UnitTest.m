@@ -86,81 +86,50 @@
     print_log_info(@"\n%d tests, %d assertions, %d failures, %d errors\n", UnitTestManager.sharedInstance.tests, UnitTestManager.sharedInstance.assertions, UnitTestManager.sharedInstance.failures, UnitTestManager.sharedInstance.errors);
 }
 
-+(BOOL) areEqual:(NSValue*)expected :(NSValue*)got {
-    BOOL equals = false;
-    if ([[expected nonretainedObjectValue] isKindOfClass:[NSArray class]]) {
-        equals = [[expected nonretainedObjectValue] isEqualToArray:[got nonretainedObjectValue]];
-    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSDictionary class]]) {
-        equals = [[expected nonretainedObjectValue] isEqualToDictionary:[got nonretainedObjectValue]];
-    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSString class]]) {
-        equals = [[expected nonretainedObjectValue] isEqualToString:[got nonretainedObjectValue]];
-    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSNumber class]]) {
-        equals = [[expected nonretainedObjectValue] isEqualToNumber:[got nonretainedObjectValue]];
-    } else if ([[expected nonretainedObjectValue] isKindOfClass:[NSDate class]]) {
-        equals = [[expected nonretainedObjectValue] isEqualToDate:[got nonretainedObjectValue]];
-    } else {
-        equals = [expected isEqualToValue:got];
-    }
-    return equals;
-}
-
-+(void) assert:(NSValue*)got equals:(NSValue*)expected message:(NSString*)message inFile:(NSString*)file atLine:(int)line {
-    UnitTestManager.sharedInstance.assertions += 1;
++(void) assert:(id)got equals:(id)expected message:(NSString*)message inFile:(NSString*)file atLine:(int)line {
     BOOL equals = false;
     if (nil == expected && nil == got) {
         equals = true;
     } else {
-        const char* expectedTypeCode = [expected objCType];
-        const char* gotTypeCode = [got objCType];
-        switch (expectedTypeCode[0]) {
-            case _C_ID:
-                equals = [self areEqual:expected :got];
-                break;
-            case _C_INT:
-                if (_C_DBL == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
-                    equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
-                } else {
+        if ([got isKindOfClass:[NSValue class]] && [expected isKindOfClass:[NSValue class]]) {
+            const char* expectedTypeCode = [expected objCType];
+            const char* gotTypeCode = [got objCType];
+            switch (expectedTypeCode[0]) {
+                case _C_INT:
+                    if (_C_DBL == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
+                        equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
+                    } else {
+                        equals = [expected isEqualToValue:got];
+                    }
+                    break;
+                case _C_FLT:
+                case _C_DBL:
+                    if (_C_INT == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
+                        equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
+                    } else {
+                        equals = [expected isEqualToValue:got];
+                    }
+                    break;
+                default:
                     equals = [expected isEqualToValue:got];
-                }
-                break;
-            case _C_FLT:
-            case _C_DBL:
-                if (_C_INT == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
-                    equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
-                } else {
-                    equals = [expected isEqualToValue:got];
-                }
-                break;
-            case _C_PTR:
-                if (nil==[expected nonretainedObjectValue] && nil==[got nonretainedObjectValue]) {
-                    equals = true;
-                } else {
-                    equals = [expected isEqualToValue:got];
-                }
-                break;
-            default:
-                equals = [expected isEqualToValue:got];
-                break;
+                    break;
+            }
+        } else {
+            equals = [expected isEqual:got];
         }
     }
-    
     if (equals) {
+        UnitTestManager.sharedInstance.assertions += 1;
         if (UnitTestManager.sharedInstance.dot_if_passed) {
             print_log_info(@".");
         } else {
-            print_log_info(@"%@%d%@%@", file, line, @"passed: %@", [got valueDescription]);
+            print_log_info(@"%@%d%@%@", file, line, @"passed: %@", got);
         }
     } else {
         UnitTestManager.sharedInstance.failures += 1;
         printf("\n");
-        
-        NSString* expected_message;
-        if (nil == message) {
-            expected_message = [expected valueDescription];
-        } else {
-            expected_message = message;
-        }
-        print_log_info(@"%@ #%03d\nAssertion failed\nExpected: %@\nGot: %@\n", file, line, expected_message, [got valueDescription]);
+        NSString* expected_message = (nil == message) ? [expected description] : message;
+        print_log_info(@"%@ #%03d\nAssertion failed\nExpected: %@\nGot: %@\n", file, line, expected_message, got);
     }
 }
 

@@ -8,6 +8,7 @@
 
 #import "NSStringExt.h"
 #import "NSArrayExt.h"
+#import "Logger.h"
 
 
 NSString* SWF(NSString* format, ...) {
@@ -24,6 +25,10 @@ NSString* SWF(NSString* format, ...) {
 NSArray* _w(NSString* str) {
     return [[str strip] componentsSeparatedByString:SPACE];
 }
+
+
+
+
 
 @implementation NSString (Ext)
 

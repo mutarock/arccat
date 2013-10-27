@@ -2,8 +2,8 @@
 //  ViewController.m
 //  TestApp
 //
-//  Created by ssukcha on 05/09/13.
-//  Copyright (c) 2013 factorcat. All rights reserved.
+//  Created by wookay on 13. 10. 28..
+//  Copyright (c) 2013년 factorcat. All rights reserved.
 //
 
 #import "ViewController.h"

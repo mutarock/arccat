@@ -49,11 +49,13 @@
 
 #define to_s(got) ({\
     typeof(got) __got = got;\
-    [[NSValue valueWithAny:&__got objCType: @encode(__typeof__(got))] description];\
+    [[NSValue stringWithAny:&__got objCType: @encode(__typeof__(got))] description];\
 })
+
 
 NSString* SWF(NSString* format, ...) ;
 NSArray* _w(NSString* str) ;
+
 
 @interface NSString (Ext)
 

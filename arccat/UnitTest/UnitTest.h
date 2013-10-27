@@ -14,8 +14,8 @@
 do { \
     __typeof__(expected) __expected = (expected); \
     __typeof__(got) __got = (got); \
-    NSValue* expectedEncoded = [NSValue valueWithAny:&__expected objCType: @encode(__typeof__(expected))]; \
-    NSValue* gotEncoded = [NSValue valueWithAny:&__got objCType: @encode(__typeof__(got))]; \
+    id expectedEncoded = [NSValue valueWithAny:&__expected objCType: @encode(__typeof__(expected))]; \
+    id gotEncoded = [NSValue valueWithAny:&__got objCType: @encode(__typeof__(got))]; \
     [UnitTest assert:gotEncoded equals:expectedEncoded inFile:[NSString stringWithUTF8String:__FILENAME__] atLine:__LINE__]; \
 } while(0)
 
@@ -49,7 +49,6 @@ do { \
 +(void) runAllTests ;
 +(void) runTests:(id)target ;
 +(void) runTest:(id)target withName:(NSString*)name ;
-+(BOOL) areEqual:(NSValue*)expected :(NSValue*)got ;
 +(void) assert:(NSValue*)got equals:(NSValue*)expected inFile:(NSString*)file atLine:(int)line ;
 +(void) assert:(NSValue*)got equals:(NSValue*)expected message:(NSString*)message inFile:(NSString*)file atLine:(int)line ;
 

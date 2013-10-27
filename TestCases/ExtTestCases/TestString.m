@@ -29,12 +29,28 @@
     assert_equal(3.14f, @"3.14".to_float);
     assert_equal(3.14f, @"3.14f".to_float);
     assert_equal(3.14, @"3.14".to_double);
-
-    CGRect rect = CGRectFromString(@"NSRect: {{1, 2}, {3, 5}}");
-    assert_equal(@"NSRect: {{1, 2}, {3, 5}}", to_s(rect));
     
     NSArray* expected = @[@"a", @"b", @"c"];
     assert_equal(expected, [@"a b c" split:@" "]);
+}
+
+-(void) test_to_s {
+    CGRect rect = CGRectFromString(@"NSRect: {{1, 2}, {3, 5}}");
+    assert_equal(@"NSRect: {{1, 2}, {3, 5}}", to_s(rect));
+    assert_equal(@"1", to_s(1));
+    assert_equal(@"3.14", to_s(3.14));
+    assert_equal(@"@1", to_s(@1));
+    assert_equal(@"@3.14", to_s(@3.14));
+    assert_equal(@"[]", to_s(@[]));
+    assert_equal(@"{}", to_s(@{}));
+    assert_equal(@"NSObject", to_s([NSObject class]));
+    assert_equal(@"nil", to_s(nil));
+    NSString* p;
+    assert_equal(@"nil", to_s(p));
+    NSNumber* n;
+    assert_equal(@"nil", to_s(n));
+    assert_equal(nil, nil);
+    assert_equal(false, false);
 }
 
 @end

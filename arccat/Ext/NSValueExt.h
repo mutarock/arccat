@@ -12,7 +12,7 @@
 
 @interface NSValue (Ext)
 
-+(NSValue*) valueWithAny:(const void *)value objCType:(const char *)type ;
--(NSString*) valueDescription ;
++(id) valueWithAny:(const void *)value objCType:(const char *)type ;
++(NSString*) stringWithAny:(const void *)value objCType:(const char *)type ;
 
 @end
