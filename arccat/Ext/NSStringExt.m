@@ -21,12 +21,13 @@ NSString* SWF(NSString* format, ...) {
     return ret;
 }
 
-
 NSArray* _w(NSString* str) {
     return [[str strip] componentsSeparatedByString:SPACE];
 }
 
-
+NSString* unichar_to_string(unichar ch) {
+	return [NSString stringWithFormat:@"%C", ch];
+}
 
 
 
@@ -115,6 +116,14 @@ NSArray* _w(NSString* str) {
     } else {
         return self;
     }
+}
+
+-(unichar) to_unichar {
+	return [self characterAtIndex:0];
+}
+
+-(NSString*) stringAtIndex:(int)idx {
+	return [self substringWithRange:NSMakeRange(idx, 1)];
 }
 
 @end

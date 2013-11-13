@@ -43,6 +43,7 @@
     assert_equal(@"@3.14", to_s(@3.14));
     assert_equal(@"[]", to_s(@[]));
     assert_equal(@"{}", to_s(@{}));
+    assert_equal(@"1", to_s(NSTextAlignmentCenter));
     assert_equal(@"NSObject", to_s([NSObject class]));
     assert_equal(@"nil", to_s(nil));
     NSString* p;

@@ -55,6 +55,7 @@
 
 NSString* SWF(NSString* format, ...) ;
 NSArray* _w(NSString* str) ;
+NSString* unichar_to_string(unichar ch) ;
 
 
 @interface NSString (Ext)
@@ -73,5 +74,7 @@ NSArray* _w(NSString* str) ;
 -(double) to_double ;
 -(NSString*) to_s ;
 -(NSString*) ljust:(int)justified ;
+-(unichar) to_unichar ;
+-(NSString*) stringAtIndex:(int)idx ;
 
 @end

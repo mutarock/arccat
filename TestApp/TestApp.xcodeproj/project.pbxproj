@@ -26,7 +26,6 @@
 		DA8BC219181D92BF0066B49C /* NSClassExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC1F9181D92BF0066B49C /* NSClassExt.m */; };
 		DA8BC21A181D92BF0066B49C /* NSDateExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC1FB181D92BF0066B49C /* NSDateExt.m */; };
 		DA8BC21B181D92BF0066B49C /* NSDictionaryExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC1FD181D92BF0066B49C /* NSDictionaryExt.m */; };
-		DA8BC21C181D92BF0066B49C /* NSNullExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC1FF181D92BF0066B49C /* NSNullExt.m */; };
 		DA8BC21D181D92BF0066B49C /* NSNumberExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC201181D92BF0066B49C /* NSNumberExt.m */; };
 		DA8BC21E181D92BF0066B49C /* NSObjectExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC203181D92BF0066B49C /* NSObjectExt.m */; };
 		DA8BC21F181D92BF0066B49C /* NSStringExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BC205181D92BF0066B49C /* NSStringExt.m */; };
@@ -82,8 +81,6 @@
 		DA8BC1FB181D92BF0066B49C /* NSDateExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateExt.m; sourceTree = "<group>"; };
 		DA8BC1FC181D92BF0066B49C /* NSDictionaryExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryExt.h; sourceTree = "<group>"; };
 		DA8BC1FD181D92BF0066B49C /* NSDictionaryExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryExt.m; sourceTree = "<group>"; };
-		DA8BC1FE181D92BF0066B49C /* NSNullExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNullExt.h; sourceTree = "<group>"; };
-		DA8BC1FF181D92BF0066B49C /* NSNullExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNullExt.m; sourceTree = "<group>"; };
 		DA8BC200181D92BF0066B49C /* NSNumberExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExt.h; sourceTree = "<group>"; };
 		DA8BC201181D92BF0066B49C /* NSNumberExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberExt.m; sourceTree = "<group>"; };
 		DA8BC202181D92BF0066B49C /* NSObjectExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectExt.h; sourceTree = "<group>"; };
@@ -231,8 +228,6 @@
 				DA8BC1FB181D92BF0066B49C /* NSDateExt.m */,
 				DA8BC1FC181D92BF0066B49C /* NSDictionaryExt.h */,
 				DA8BC1FD181D92BF0066B49C /* NSDictionaryExt.m */,
-				DA8BC1FE181D92BF0066B49C /* NSNullExt.h */,
-				DA8BC1FF181D92BF0066B49C /* NSNullExt.m */,
 				DA8BC200181D92BF0066B49C /* NSNumberExt.h */,
 				DA8BC201181D92BF0066B49C /* NSNumberExt.m */,
 				DA8BC202181D92BF0066B49C /* NSObjectExt.h */,
@@ -392,7 +387,6 @@
 				DA8BC1D5181D92B70066B49C /* ViewController.m in Sources */,
 				DA8BC21B181D92BF0066B49C /* NSDictionaryExt.m in Sources */,
 				DA8BC224181D92BF0066B49C /* TestArray.m in Sources */,
-				DA8BC21C181D92BF0066B49C /* NSNullExt.m in Sources */,
 				DA8BC226181D92BF0066B49C /* TestDictionary.m in Sources */,
 				DA8BC222181D92BF0066B49C /* Logger.m in Sources */,
 				DA8BC1CC181D92B70066B49C /* AppDelegate.m in Sources */,
@@ -624,6 +618,7 @@
 				DA8BC1EF181D92B70066B49C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA8BC1F0181D92B70066B49C /* Build configuration list for PBXNativeTarget "TestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -632,6 +627,7 @@
 				DA8BC1F2181D92B70066B49C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

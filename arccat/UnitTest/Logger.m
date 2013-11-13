@@ -17,7 +17,7 @@ void stdout_log_info(BOOL filename_lineno_flag, const char* filename, int lineno
     if ([format isKindOfClass:[NSString class]]) {
         va_list args;
         va_start (args, format);
-        str = [[NSString alloc] initWithFormat:format  arguments: args];
+        str = [[NSString alloc] initWithFormat:format  arguments:args];
         va_end (args);
     } else {
         str = [[NSString alloc] initWithString:[format description]];
