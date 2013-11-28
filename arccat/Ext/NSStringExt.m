@@ -126,4 +126,8 @@ NSString* unichar_to_string(unichar ch) {
 	return [self substringWithRange:NSMakeRange(idx, 1)];
 }
 
+-(BOOL) isEmptyString {
+    return [Empty isEqualToString:self];
+}
+
 @end

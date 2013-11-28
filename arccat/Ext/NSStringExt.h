@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSValueExt.h"
 
+#define Empty            @""
 #define EMPTY_STRING     @""
 #define SPACE            @" "
 #define LF               @"\n"
@@ -76,5 +77,6 @@ NSString* unichar_to_string(unichar ch) ;
 -(NSString*) ljust:(int)justified ;
 -(unichar) to_unichar ;
 -(NSString*) stringAtIndex:(int)idx ;
+-(BOOL) isEmptyString ;
 
 @end
