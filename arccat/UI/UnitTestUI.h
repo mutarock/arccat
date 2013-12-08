@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 factorcat. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "UnitTest.h"
 
 @interface UnitTest (UI)
