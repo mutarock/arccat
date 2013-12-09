@@ -7,14 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import "arccat.h"
+#import "Console.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [UnitTest run:self];
+    
+#if TARGET_IPHONE_SIMULATOR
+    [Console run:self];
+#endif
     
     return YES;
 }
