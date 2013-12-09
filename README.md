@@ -1,6 +1,7 @@
 # arccat
 
 ## UnitTest
+    TestCases
     [UnitTest run];
     [UnitTest run:self];
 
