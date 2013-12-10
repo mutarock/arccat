@@ -79,7 +79,7 @@
     }
     [ary addObject:SWF(@"<img src='%@' title='%@'/>", SLASH_IMAGE_SLASH_CAPTURE, SLASH_IMAGE_SLASH_CAPTURE)];
     [ary addObject:@"</pre>"];
-    return [ary join:LF];
+    return [ary componentsJoinedByString:@"\n"];
 }
          
 +(void) run {

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013년 factorcat. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "HTTPServer.h"
 #define SLASH_IMAGE_SLASH           @"/image/"
 #define SLASH_IMAGE_SLASH_LENGTH    7
