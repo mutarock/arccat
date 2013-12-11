@@ -31,7 +31,7 @@
     assert_equal(3.14, @"3.14".to_double);
     
     NSArray* expected = @[@"a", @"b", @"c"];
-    assert_equal(expected, [@"a b c" split:@" "]);
+    assert_equal(expected, [@"a b c" Split:@" "]);
 }
 
 -(void) test_to_s {
