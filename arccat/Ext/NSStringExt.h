@@ -62,7 +62,7 @@ NSString* unichar_to_string(unichar ch) ;
 
 -(NSString*) strip ;
 -(NSArray*) Split:(NSString*)sep ;
--(NSArray*) each_char ;
+-(NSArray*) eachChar ;
 -(NSString*) reverse ;
 -(NSString*) slice:(int)loc :(int)length_ ;
 -(NSString*) slice:(int)loc backward:(int)backward ;

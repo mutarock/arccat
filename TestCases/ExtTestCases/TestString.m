@@ -32,6 +32,7 @@
     
     NSArray* expected = @[@"a", @"b", @"c"];
     assert_equal(expected, [@"a b c" Split:@" "]);
+    assert_equal(expected, [@"abc" eachChar]);
 }
 
 -(void) test_to_s {

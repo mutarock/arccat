@@ -54,7 +54,7 @@ NSString* unichar_to_string(unichar ch) {
     }
 }
 
--(NSArray*) each_char {
+-(NSArray*) eachChar {
 	return [self Split:Empty];
 }
 
