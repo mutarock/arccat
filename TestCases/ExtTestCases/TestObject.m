@@ -18,9 +18,7 @@
     assert_equal(@"TestObject", self.className);
     assert_equal(@[@"+(id) class_method:(int)intValue ;"], self.classMethods);
     assert_equal(@[@"-(void) test_methods ;"], self.methods);
-
 }
-
 
 
 +(NSString*) class_method:(int)n {

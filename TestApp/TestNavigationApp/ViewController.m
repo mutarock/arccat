@@ -1,26 +1,27 @@
 //
-//  FirstViewController.m
-//  TestTabBarApp
+//  ViewController.m
+//  TestNavigationApp
 //
-//  Created by ssukcha on 2013. 12. 9..
+//  Created by ssukcha on 2013. 12. 13..
 //  Copyright (c) 2013년 factorcat. All rights reserved.
 //
 
-#import "FirstViewController.h"
-#import "Console.h"
+#import "ViewController.h"
 #import "Logger.h"
 #import "NSObjectExt.h"
 
-@interface FirstViewController ()
+
+@interface ViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.title = NSLocalizedString(@"TestApp", nil);
 }
 
 - (void)didReceiveMemoryWarning

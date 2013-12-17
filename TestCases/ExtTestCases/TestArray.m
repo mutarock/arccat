@@ -37,22 +37,22 @@
 -(void) test_array {
     assert_equal(@[], [NSArray array]);
     NSArray* ary = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
-    assert_equal(@"[a, b, c]", ary.to_s);
+    assert_equal(@"[a, b, c]", ary.To_s);
     assert_equal(3, ary.count);
 
     NSArray* numbers = [NSArray arrayWithObjects:@1, @2, @3, nil];
-    assert_equal(@"[1, 2, 3]", numbers.to_s);
+    assert_equal(@"[1, 2, 3]", numbers.To_s);
 
     assert_equal(@"1,2,3", [numbers Join:COMMA]);
     assert_equal(true, [numbers include:@2]);
     //assert_equal(@[], [ary slice:0 :-1]);
     assert_equal(@[], [ary slice:3 :1]);
     assert_equal(@"b,c", [[ary slice:1 :2] Join:COMMA]);
-    assert_equal(@"c b a", [ary.reverse Join:SPACE]);
-    assert_equal(@"a", ary.first);
+    assert_equal(@"c b a", [ary.Reverse Join:SPACE]);
+    assert_equal(@"a", ary.First);
     assert_equal(@"b", ary.second);
     assert_equal(@"c", ary.third);
-    assert_equal(@"c", ary.last);
+    assert_equal(@"c", ary.Last);
 }
 
 @end

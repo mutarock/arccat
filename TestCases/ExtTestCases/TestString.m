@@ -16,8 +16,8 @@
 @implementation TestString
 
 -(void) test_string {
-    assert_equal(@"a", [@" a " strip]);
-    assert_equal(@"cba", [@"abc" reverse]);
+    assert_equal(@"a", [@" a " Strip]);
+    assert_equal(@"cba", [@"abc" Reverse]);
     assert_equal(@"bc", [@"abc" slice:1 :2]);
     assert_equal(@"abcd", [@"abcff" gsub:@"ff" to:@"d"]);
     assert_equal(3, @"abc".length);
@@ -32,7 +32,7 @@
     
     NSArray* expected = @[@"a", @"b", @"c"];
     assert_equal(expected, [@"a b c" Split:@" "]);
-    assert_equal(expected, [@"abc" eachChar]);
+    assert_equal(expected, [@"abc" Each_char]);
 }
 
 -(void) test_to_s {
