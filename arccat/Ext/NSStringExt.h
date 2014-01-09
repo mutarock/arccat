@@ -11,7 +11,7 @@
 
 #define Empty            @""
 #define SPACE            @" "
-#define LF               @"\n"
+#define LINEFEED         @"\n"
 #define TABCHAR          @"\t"
 #define AMP              @"&"
 #define AT_SIGN          @"@"
@@ -22,7 +22,7 @@
 #define COMMA            @","
 #define UNDERBAR         @"_"
 #define COMMA_SPACE      @", "
-#define COMMA_LF         @",\n"
+#define COMMA_LINEFEED   @",\n"
 #define DOT              @"."
 #define DOT_SPACE        @". "
 #define DOT_DOT          @".."
