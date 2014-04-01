@@ -16,6 +16,7 @@
 @implementation TestArray
 
 -(void) test_mutable_array {
+    assert_equal([@[] isKindOfClass:[NSMutableArray class]], false);
     assert_equal(false, [@[] isKindOfClass:[NSMutableArray class]]);
     assert_equal(true, [@[] isKindOfClass:[NSArray class]]);
     

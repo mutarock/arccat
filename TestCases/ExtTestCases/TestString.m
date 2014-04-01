@@ -36,6 +36,7 @@
 }
 
 -(void) test_to_s {
+#if TARGET_OS_IPHONE
     CGRect rect = CGRectFromString(@"NSRect: {{1, 2}, {3, 5}}");
     assert_equal(@"NSRect: {{1, 2}, {3, 5}}", to_s(rect));
     assert_equal(@"1", to_s(1));
@@ -53,6 +54,7 @@
     assert_equal(@"nil", to_s(n));
     assert_equal(nil, nil);
     assert_equal(false, false);
+#endif
 }
 
 @end

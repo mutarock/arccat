@@ -18,7 +18,7 @@
 - (NSDictionary*) httpHeaders {
     return @{ @"Content-Type" : @"image/png",
               @"Connection" : @"close",
-              @"Content-Length" : [NSString stringWithFormat:@"%d", [data length]]};
+              @"Content-Length" : [NSString stringWithFormat:@"%lu", (unsigned long)[data length]]};
 }
 @end
 

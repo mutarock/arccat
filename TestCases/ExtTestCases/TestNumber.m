@@ -27,7 +27,9 @@
 }
 
 -(void) test_enum {
+#if TARGET_OS_IPHONE
     assert_equal([NSNumber numberWithInt:NSTextAlignmentCenter], Enum(NSTextAlignmentCenter));
+#endif
 }
 
 -(void) test_number {

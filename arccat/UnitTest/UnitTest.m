@@ -95,8 +95,13 @@
             const char* expectedTypeCode = [expected objCType];
             const char* gotTypeCode = [got objCType];
             switch (expectedTypeCode[0]) {
+                case _C_BOOL:
+                    equals = (bool)[expected pointerValue] == (bool)[got pointerValue];
+                    break;
                 case _C_INT:
-                    if (_C_DBL == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
+                    if (_C_BOOL == gotTypeCode[0]) {
+                        equals = (bool)[expected pointerValue] == (bool)[got pointerValue];
+                    } else if (_C_DBL == gotTypeCode[0] || _C_FLT == gotTypeCode[0]) {
                         equals = [(NSNumber*)expected isEqualToNumber:(NSNumber*)got];
                     } else if (_C_LNG_LNG == gotTypeCode[0] || _C_CHR == gotTypeCode[0]) {
                         equals = [(NSNumber*)expected intValue] == [(NSNumber*)got intValue];

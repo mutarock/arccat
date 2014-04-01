@@ -80,4 +80,5 @@ NSString* unichar_to_string(unichar ch) ;
 -(NSString*) Ljust:(int)justified ;
 -(NSString*) Strip ;
 -(NSString*) Reverse ;
+-(NSString*) Concat:(NSString*)str ;
 @end

@@ -134,4 +134,8 @@ NSString* unichar_to_string(unichar ch) {
     return [[[self Split:Empty] Reverse] Join:Empty];
 }
 
+-(NSString*) Concat:(NSString*)str {
+    return [self stringByAppendingString:str];
+}
+
 @end
